@@ -18,10 +18,10 @@ int main() {
     cin >> priceForOne;
     cout << "Вага яблук(кг): ";
     cin >> weight;
-    float answer = Sum(weight);
+    float answer = Sum(weight, priceForOne);
     cout << "Вартість покупки " << answer << " грн.";
 }
 
-float Sum(float weight) {
-    return weight * 8.5;
+float Sum(float weight, float priceForOne) {
+    return weight * priceForOne;
 }
