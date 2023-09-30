@@ -4,7 +4,7 @@
 
 // Var 22
 using namespace std;
-int main() {
+void main() {
 	double a = 0.9;
 	double x;
 	double result;
