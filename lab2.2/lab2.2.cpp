@@ -13,10 +13,12 @@ void main() {
 	double x;
 	char choice;
 
-	cout << "What type of your work?" << endl << "1 - À" << endl << "2 - Á " << endl << "3 - Â" << endl;
-	cin >> choice;
+	
 	cout << "Type the X: ";
 	cin >> x;
+	cout << "What type of your work?" << endl << "1 - À" << endl << "2 - Á " << endl << "3 - Â" << endl;
+	start:
+	cin >> choice;
 
 	if (choice == '1') {
 		float f = 11.2 * cos(2 * x - 1) + abs(sin(1.5)) / 1.7;
@@ -44,4 +46,9 @@ void main() {
 		float tax = y / 100 * 20;
 		float paidWithTax = y - tax;
 	}
+	else {
+		cout << "Incorrect enter, try again!";
+		goto start;
+	}
+	
 }
