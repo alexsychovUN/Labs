@@ -2,11 +2,13 @@
 
 using namespace std;
 void main() {
-	int num = 4;
+	int precision;
+	cout << "Enter number of members in a number: ";
+	cin >> precision;
 	double e = 1.0;
 	double factorial = 1.0;
 	int i = 1;
-	while (i <= num) {
+	while (i <= precision) {
 		factorial *= i;
 		e += 1 / factorial;
 		i++;
