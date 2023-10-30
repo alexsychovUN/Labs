@@ -363,3 +363,5 @@ MigrationBackup/
 FodyWeavers.xsd
 /cum/cum.vcxproj
 /cum/cum.vcxproj.filters
+/cum/cum.cpp
+/cum/ancientslavic.h
