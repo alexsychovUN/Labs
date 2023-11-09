@@ -17,8 +17,8 @@ int main() {
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
     int n;
-    std::cout << "¬вед≥ть натуральне число n: ";
-    std::cin >> n;
+    cout << "¬вед≥ть натуральне число n: ";
+    cin >> n;
 
     int a, b;
 

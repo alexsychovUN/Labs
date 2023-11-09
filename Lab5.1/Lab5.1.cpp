@@ -18,43 +18,47 @@ int factorial(int n) {
 double taylor_tan(double x, int n) {
     double result = 0.0;
     for (int i = 1; i <= n; i++) {
-        if (i % 2 == 1) {
+        /*if (i % 2 == 1) {
             result += pow(x, 2 * i - 1) / factorial(2 * i - 1);
         }
         else {
             result -= pow(x, 2 * i - 1) / factorial(2 * i - 1);
-        }
+        }*/
+        result += 2 * (i - 2) * pow(x, 2 * i - 1) / factorial(2 * i - 1);
     }
     return result;
 }
 
 
-
+using namespace std;
 int main() {
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
     const double step = 0.5;
     const int n_terms = 10;  // Кількість термінів у ряді Тейлора
-    double x, y, exact_y, error;
+    double x, y, exact_y, error, approx_y;
 
-    std::cout << "x\t\tExact y\t\tApproximated y\tError" << std::endl;
+    cout << "x\t\tExact y\t\tApproximated y\tError" << endl;
 
     for (x = -3; x <= 3; x += step) {
         if (x >= -3 && x <= 0) {
             // Обчислюємо точне значення функції y для цього діапазону
-            exact_y = tan(x * x) - 2 * x;
+            exact_y = (tan(x * x) - 2 * x) / tan(x);
+            approx_y = (taylor_tan((x * x), 10) - 2 * x) / taylor_tan((x), 10);
         }
         else {
             exact_y = tan((x + 2) * (x + 2)) - tan(x);
+            approx_y = taylor_tan(((x + 2) * (x + 2)), 10) - taylor_tan((x), 10);
         }
 
         // Обчислюємо наближене значення y за допомогою ряду Тейлора
-        double approx_y = taylor_tan(x, n_terms);
+        /*double approx_y = taylor_tan(x, n_terms);*/
+        
 
         // Обчислюємо похибку
-        error = std::abs(exact_y - approx_y);
+        error = abs(exact_y - approx_y);
 
-        std::cout << x << "\t\t" << exact_y << "\t\t" << approx_y << "\t\t" << error << std::endl;
+        cout << x << "\t\t" << exact_y << "\t\t" << approx_y << "\t\t" << error << endl;
     }
 
     return 0;
