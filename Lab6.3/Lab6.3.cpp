@@ -34,7 +34,7 @@ int main() {
 
 void InputArrayRand(int* arr, int size) {
 	for (int i = 0; i < size; i++) {
-		arr[i] = static_cast<float>(rand()) / RAND_MAX * 30;;
+		arr[i] = static_cast<float>(rand()) / RAND_MAX * 30;
 	}
 }
 
