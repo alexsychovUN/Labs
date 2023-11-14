@@ -87,5 +87,6 @@ int main() {
 
     int vecSize = array.size();
     matrixVectorMultiply(matrix, row1, col1, array, vecSize);
+   
 }
 
