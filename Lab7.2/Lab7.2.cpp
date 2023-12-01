@@ -43,5 +43,5 @@ int main() {
     for (int i = 2; i < 5; ++i) {
         sum += matrix[i][i - 2]; // Половина головної діагоналі знизу
     }
-    cout << sum << endl;
+    cout << "Final sum: " << sum << endl;
 }

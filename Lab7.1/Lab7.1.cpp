@@ -50,7 +50,6 @@ void printVector(vector<float> array, int kol) {
     }
     cout << endl;
 }
-
 void matrixVectorMultiply(float matrix[MAXSIZE][MAXSIZE], int& line, int& kol, vector<float>& array, int& vecSize) {
     if (kol != vecSize) {
         cout << "Cannot perform multiplication. Matrix column count should match vector size." << endl;
@@ -68,8 +67,6 @@ void matrixVectorMultiply(float matrix[MAXSIZE][MAXSIZE], int& line, int& kol, v
     cout << "Result of matrix-vector multiplication:" << endl;
     printVector(result, line);
 }
-
-
 
 int main() {
     
