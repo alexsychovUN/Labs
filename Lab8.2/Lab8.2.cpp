@@ -33,9 +33,4 @@ int main() {
 	cout << "String after erase: " << input << endl;
 	cout << "Index of a: " << findIndex(input, 'a') << endl;
 	cout << "Added some words: " << appendStrings(input, input2);
-	
-
-
-
-
 }

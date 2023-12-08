@@ -12,8 +12,8 @@ void OutputArray(int*, int);
 
 
 int main() {
-	const int size = 10;
-	int arr1[size];
+	int size = 10;
+	int arr1 = new int*[size];
 	int arr2[size];
 	InputArrayRand(arr1, size);
 

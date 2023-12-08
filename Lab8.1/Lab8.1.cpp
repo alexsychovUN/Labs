@@ -56,11 +56,11 @@ int main() {
 		}
 
 		if (IsIdentifier(word)) {
-			std::cout << "Identifier: " << word << endl;
+			cout << "Identifier: " << word << endl;
 		}
 
 		if (IsNaturalNumber(word)) {
-			std::cout << "Natural number: " << word << endl;
+			cout << "Natural number: " << word << endl;
 		}
 	}
 
